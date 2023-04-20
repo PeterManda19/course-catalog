@@ -1,4 +1,5 @@
 describe('courseCost', () => {
+    /*unit test that: * Ensures that courses get different prices across discount windows*/
     it('should return a discount of 40% for courses starting between the 20th and 25th', () => {
       const result = courseCost('p1', '2023-04-22');
       expect(result.amountDue).to.equal(4710);
@@ -14,11 +15,13 @@ describe('courseCost', () => {
       expect(result.amountDue).to.equal(5675);
     });
   
+    /*unit test that: * Ensures that invalid course codes are handled correctly*/
     it('should return an error for invalid course codes', () => {
       const result = courseCost('x1', '2023-04-22');
       expect(result.status).to.equal('Invalid code');
     });
   
+    /*unit test that: * Ensures that invalid dates returns a status of: Invalid day*/
     it('should return an error for invalid start dates', () => {
       const result = courseCost('p1', '2023-04-31');
       expect(result.status).to.equal('Invalid day');
