@@ -22,9 +22,10 @@ describe('courseCost', () => {
     });
   
     /*unit test that: * Ensures that invalid dates returns a status of: Invalid day*/
+    /**/
     it('should return an error for invalid start dates', () => {
       const result = courseCost('p1', '2023-04-31');
-      assert.equal(result.status, 'Invalid day');
+      assert.equal(result.status, 'Invalid date');
     });
 
     /*unit test that: * Ensures different courses has different prices*/
