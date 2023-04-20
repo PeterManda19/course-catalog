@@ -22,6 +22,5 @@ function tutorWageCalculator(timesheet, level) {
     } else if (level === 3) {
       wage = totalHours * 35;
     }
-  
     return wage;
   }  
