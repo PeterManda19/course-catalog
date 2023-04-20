@@ -15,5 +15,4 @@ describe("The tutorOvertimeWageCalculator function", function () {
         assert.equal(1646.4, tutorOvertimeWageCalculator("8-8-8-8-8-9-5", 3)) //
         assert.equal(1881.60, tutorOvertimeWageCalculator("8-8-8-10-8-7-7", 3).toFixed(2)) //
     });
-
-})
+});
