@@ -1,3 +1,6 @@
+import { expect } from 'chai';
+
+
 describe('courseCost', () => {
     /*unit tests that: * Ensures that courses get different prices across discount windows*/
     it('should return a discount of 40% for courses starting between the 20th and 25th', () => {
