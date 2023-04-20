@@ -6,11 +6,14 @@ function tutorWageCalculator(timesheet, level) {
     if (hours.length !== 5 || hours.length !== 6 || hours.length !== 7 ) {
       return 0; // return 0 for invalid timesheet
     }
-  
+
+    // Convert each string in the array into a number
+    const numbersArray = hours.map(Number);
+
     // calculate the total hours worked
-    const totalHours = hours.reduce((acc, hour) => acc + parseInt(hour), 0);
+    // by up summing he numbers in the array using the reduce method
+    const totalHours = numbersArray.reduce((acc, curr) => acc + curr);
     
-  
     // calculate the wage based on the level and total hours worked
     let wage;
     if (level === 1) {
