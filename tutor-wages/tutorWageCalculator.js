@@ -8,10 +8,8 @@ function tutorWageCalculator(timesheet, level) {
     }
   
     // calculate the total hours worked
-    const totalHours = hours.reduce((total, hour) => {
-      // convert the hour string to a number and add it to the total
-      return total + parseInt(hour);
-    }, 0);
+    const totalHours = hours.reduce((acc, hour) => acc + parseInt(hour), 0);
+    
   
     // calculate the wage based on the level and total hours worked
     let wage;
@@ -22,5 +20,6 @@ function tutorWageCalculator(timesheet, level) {
     } else if (level === 3) {
       wage = totalHours * 35;
     }
+    // Return the calculated wage
     return wage;
   }  
