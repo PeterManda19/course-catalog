@@ -13,4 +13,15 @@ function tutorWageCalculator(timesheet, level) {
       return total + parseInt(hour);
     }, 0);
   
+    // calculate the wage based on the level and total hours worked
+    let wage;
+    if (level === 1) {
+      wage = totalHours * 25;
+    } else if (level === 2) {
+      wage = totalHours * 30;
+    } else if (level === 3) {
+      wage = totalHours * 35;
+    }
+  
+    return wage;
   }  
