@@ -1,4 +1,5 @@
 function tutorWageCalculator(timesheet, level) {
+    // initialize the total hours to 0
     let totalHours = 0;
 
     // split the timesheet string into an array of hours worked for each day
@@ -9,7 +10,7 @@ function tutorWageCalculator(timesheet, level) {
       return 0; // return 0 for invalid timesheet
     }
     else{
-      // Loop through each number in the array and add it to the sum
+      // Loop through each number in the array and add it tolalHours
       for (let i = 0; i < hours.length; i++) {
         totalHours += Number(hours[i]);
       }
