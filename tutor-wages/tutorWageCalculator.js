@@ -5,13 +5,13 @@ function tutorWageCalculator(timesheet, level) {
     const hours = timesheet.split("-");
   
     // check that the timesheet has exactly 5 or 6 or 7 entries
-    if (hours.length !== 5 || hours.length !== 6 || hours.length !== 7 ) {
+    if (hours.length !== 5 && hours.length !== 6 && hours.length !== 7 ) {
       return 0; // return 0 for invalid timesheet
     }
     else{
       // Loop through each number in the array and add it to the sum
       for (let i = 0; i < hours.length; i++) {
-        totalHours += Number(numbers[i]);
+        totalHours += Number(hours[i]);
       }
     }
      
@@ -26,4 +26,4 @@ function tutorWageCalculator(timesheet, level) {
     }
     // Return the calculated wage
     return wage;
-  }  
+}  
