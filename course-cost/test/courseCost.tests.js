@@ -7,7 +7,7 @@ describe('courseCost', () => {
   
     it('should return a discount of 20% for courses starting between the 10th and 15th', () => {
       const result = courseCost('p2', '2023-04-12');
-      eassert.equal(result.amountDue, 7192);
+      assert.equal(result.amountDue, 7192);
     });
   
     it('should return the original price for courses starting outside discount windows', () => {
