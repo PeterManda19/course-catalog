@@ -7,4 +7,10 @@ function tutorWageCalculator(timesheet, level) {
       return 0; // return 0 for invalid timesheet
     }
   
+    // calculate the total hours worked
+    const totalHours = hours.reduce((total, hour) => {
+      // convert the hour string to a number and add it to the total
+      return total + parseInt(hour);
+    }, 0);
+  
   }  
