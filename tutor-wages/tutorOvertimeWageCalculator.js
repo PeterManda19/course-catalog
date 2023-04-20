@@ -36,7 +36,7 @@ function tutorOvertimeWageCalculator(timesheet, level) {
     overtimeRate = 0.12; // 12% overtime rate for level 3
   }
   if (overtimeHours > 0) {
-    overtimeWage = overtimeHours * (hourlyRate + overtimeRate); // calculate overtime wage
+    overtimeWage = overtimeHours * (hourlyRate * (1 + overtimeRate)); // calculate overtime wage
   }
 
   // Return the calculated total overtime wage based on extra hours worked
